@@ -10,7 +10,7 @@ namespace SharedLibrary
         public const string ClientId = "";
 
         public const string ClientSecret = "";
-
+         
         public static string PublicAccessToken
         {
             get { return ""; }
