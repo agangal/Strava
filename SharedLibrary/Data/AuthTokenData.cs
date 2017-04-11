@@ -36,7 +36,7 @@ namespace SharedLibrary
         public bool primary { get; set; }
         public string name { get; set; }
         public int resource_state { get; set; }
-        public int distance { get; set; }
+        public double distance { get; set; }
     }
 
     public class Athlete
