@@ -29,7 +29,7 @@ namespace StravaUWP.Helper
             res.result = ResultStatus.Successful;
             //string authurl = URIHelper.AUTHORIZATION_CODE_URI + "?client_id=" + Settings.CLIENT_ID + "&response_type=code&scope=offline public rides.read profile rides.request&state=" + Settings.STATE;
             Uri StartUri = new Uri(StravaUri.AuthorizationUri);
-            Uri EndUri = new Uri("https://ashishgangal.com/");
+            Uri EndUri = new Uri("http://ashishgangal.com/");
             WebAuthenticationResult WebAuthResult = await WebAuthenticationBroker.AuthenticateAsync(WebAuthenticationOptions.None, StartUri, EndUri);
             if (WebAuthResult.ResponseStatus == WebAuthenticationStatus.Success)
             {
@@ -53,9 +53,9 @@ namespace StravaUWP.Helper
             Results res = new Results();
             try
             {
-                string content = "client_id=" + AuthSettings.ClientId  + "client_secret=" + AuthSettings.ClientSecret + "&code=" + authorization_code;
-                HttpStringContent stringcont = new HttpStringContent(content);
-                var httpresponseMessage = await httpClient.PostAsync(new Uri(StravaUri.TokenUri), stringcont);
+                string content = "?client_id=" + AuthSettings.ClientId  + "&client_secret=" + AuthSettings.ClientSecret + "&code=" + authorization_code;
+                HttpStringContent stringcont = new HttpStringContent("");
+                var httpresponseMessage = await httpClient.PostAsync(new Uri(StravaUri.TokenUri + content), stringcont);
                 if (httpresponseMessage.IsSuccessStatusCode)
                 {
                     string resp = await httpresponseMessage.Content.ReadAsStringAsync();
