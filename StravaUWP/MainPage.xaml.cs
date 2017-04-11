@@ -17,14 +17,19 @@ using Windows.UI.Xaml.Navigation;
 
 namespace StravaUWP
 {
-    /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
-    /// </summary>
+    using Helper;
+    
     public sealed partial class MainPage : Page
     {
         public MainPage()
         {
             this.InitializeComponent();
+            this.Loaded += MainPage_Loaded;
+        }
+
+        private void MainPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            AuthHelper.StravaSigninFlow();
         }
     }
 }

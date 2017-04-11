@@ -9,5 +9,9 @@
     <Import_RootNamespace>SharedLibrary</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Constants\AuthSettings.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Constants\Results.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Constants\StravaUri.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\AuthTokenData.cs" />
   </ItemGroup>
 </Project>
