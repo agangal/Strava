@@ -60,6 +60,9 @@ namespace StravaUWP.Helper
                 {
                     string resp = await httpresponseMessage.Content.ReadAsStringAsync();
                     AuthTokenData obj = JsonConvert.DeserializeObject<AuthTokenData>(resp);
+                    Athlete athleteObj = obj.athlete;
+                    string json = JsonConvert.SerializeObject(athleteObj);
+                    await SharedLibrary.Helper.FileHelper.WriteFile(SharedLibrary.Constants.AppConstants.ProfileFile, json);
                     AuthSettings.ScopeAccessToken = obj.access_token;
                     res.result = ResultStatus.Successful;
                 }

@@ -9,7 +9,7 @@ namespace SharedLibrary.Helper
     using System.Diagnostics;
     public class FileHelper
     {
-        public async Task<string> ReadFile(string filename)
+        public static async Task<string> ReadFile(string filename)
         {
           
             var applicationData = Windows.Storage.ApplicationData.Current;
@@ -27,7 +27,7 @@ namespace SharedLibrary.Helper
             return response;
         }
 
-        public async Task<bool> writeFile(string filename, string response)
+        public static async Task<bool> WriteFile(string filename, string data)
         {
             var applicationData = Windows.Storage.ApplicationData.Current;
             var localFolder = applicationData.LocalFolder;
@@ -36,7 +36,7 @@ namespace SharedLibrary.Helper
             {
                 //Debug.WriteLine("In try of write.");
                 StorageFile sampleFile = await localFolder.CreateFileAsync(filename, CreationCollisionOption.ReplaceExisting);
-                await FileIO.WriteTextAsync(sampleFile, response);
+                await FileIO.WriteTextAsync(sampleFile, data);
             }
             catch (System.UnauthorizedAccessException e)
             {
