@@ -7,13 +7,13 @@ namespace SharedLibrary
 {
     public class AuthSettings
     {
-        public const string ClientId = "";
+        public const string ClientId = "17245";
 
-        public const string ClientSecret = "";
+        public const string ClientSecret = "18928d12c615e97bc7b8a450b86da1143d50fe81";
          
         public static string PublicAccessToken
         {
-            get { return ""; }
+            get { return "a9231b47b519c861a61d03ead814de940e9c9d21"; }
         }
 
         public const string Scope = "view_private,write";
