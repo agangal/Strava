@@ -13,7 +13,21 @@
         <viewModels:ProfileViewModel x:Name="ProfileViewModel"></viewModels:ProfileViewModel>
     </Page.DataContext>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel Orientation="Vertical" Margin="20">
+        <ScrollViewer>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <!--TOP ROW-->
+                <Grid Grid.Row="0" BorderBrush="#cccccc" BorderThickness="0,0,0,1">
+                    <TextBlock Text="Profile" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"></TextBlock>
+                </Grid>
+            </Grid>
+        </ScrollViewer>
+        
+        <!--<StackPanel Orientation="Vertical" Margin="20">
             <TextBlock Text="Testing MVVM"></TextBlock>
             <TextBlock x:Name="AthleteFirstName" Text="{Binding AthleteInfo.firstname, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></TextBlock>
             <ListView ItemsSource="{Binding ShoesCollection, Mode=TwoWay}">
@@ -23,6 +37,6 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-        </StackPanel>        
+        </StackPanel>-->        
     </Grid>
 </Page>
