@@ -19,6 +19,5 @@
     <Compile Include="$(MSBuildThisFileDirectory)Data\AuthTokenData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helper\FileHelper.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\ProfileViewModel.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\ViewModelHelper.cs" />
   </ItemGroup>
 </Project>
