@@ -27,9 +27,11 @@ namespace StravaUWP
             this.Loaded += MainPage_Loaded;
         }
 
-        private void MainPage_Loaded(object sender, RoutedEventArgs e)
+        private  async void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
-            AuthHelper.StravaSigninFlow();
+            await AuthHelper.StravaSigninFlow();
+            Frame RootFrame = Window.Current.Content as Frame;
+            RootFrame.Navigate(typeof(Pages.ProfilePage));
         }
     }
 }

@@ -9,9 +9,16 @@
     <Import_RootNamespace>SharedLibrary</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Constants\AppConstants.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Constants\AuthSettings.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Constants\Results.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Constants\StravaUri.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\Athlete.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\Club.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Data\Shoe.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\AuthTokenData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Helper\FileHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\ProfileViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\ViewModelHelper.cs" />
   </ItemGroup>
 </Project>
