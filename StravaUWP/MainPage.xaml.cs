@@ -18,7 +18,8 @@ using Windows.UI.Xaml.Navigation;
 namespace StravaUWP
 {
     using Helper;
-    
+    using SharedLibrary;
+ 
     public sealed partial class MainPage : Page
     {
         public MainPage()
@@ -29,7 +30,10 @@ namespace StravaUWP
 
         private  async void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
-            await AuthHelper.StravaSigninFlow();
+            if (AuthSettings.ScopeAccessToken == null)
+            {
+                await AuthHelper.StravaSigninFlow();
+            }
             Frame RootFrame = Window.Current.Content as Frame;
             RootFrame.Navigate(typeof(Pages.ProfilePage));
         }
