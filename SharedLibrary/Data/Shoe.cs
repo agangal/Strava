@@ -3,12 +3,8 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace SharedLibrary
-{
+{   
     public class Shoe
-    {
-    }
-
-    public class Sho
     {
         public string id { get; set; }
         public bool primary { get; set; }

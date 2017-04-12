@@ -34,6 +34,6 @@ namespace SharedLibrary
         public object ftp { get; set; }
         public double weight { get; set; }
         public List<object> bikes { get; set; }
-        public List<Sho> shoes { get; set; }
+        public List<Shoe> shoes { get; set; }
     }
 }
