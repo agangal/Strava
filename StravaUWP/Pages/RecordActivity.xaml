@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="StravaUWP.Pages.RecordActivity"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:StravaUWP.Pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+            <RowDefinition Height="Auto"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Style="{StaticResource TitleBarGridStyle}">
+            <TextBlock Text="Run" Style="{StaticResource TitleBarHeadingStyle}"></TextBlock>
+        </Grid>
+        <Grid Grid.Row="1" Background="#2AD85F">
+            <TextBlock Text="GPS SIGNAL ACQUIRED" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="White" FontSize="12" Margin="5"></TextBlock>
+        </Grid>
+        <Maps:MapControl Grid.Row="2"
+            x:Name="ActivityMapView"            
+            ZoomInteractionMode="GestureAndControl"
+            TiltInteractionMode="GestureAndControl"   
+            MapServiceToken="DAPntNl3nFQ77ZnQJ11j~UBZWS5WadayHUSUaVI_iMA~AhwF-6z9Ei6wQHxYd_eXHX4ma_b2FuZvrxgxTQs6gD-1aTmmfOp1T-Z-vghT2RMu"/>
+
+        <Grid Grid.Row="3">
+            
+        </Grid>
+
+        <Grid Grid.Row="4">
+            <Grid x:Name="ActivityStart" HorizontalAlignment="Center" VerticalAlignment="Center" Tapped="ActivityStart_Tapped">
+                <Ellipse Height="103" Width="103" Fill="Gray" Opacity="0.2" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center"></Ellipse>
+                <Ellipse Height="102" Width="102" Fill="Gray" Opacity="0.4" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center"></Ellipse>
+                <Ellipse Height="101" Width="101" Fill="Gray" Opacity="0.6" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center"></Ellipse>
+                <Ellipse Height="100" Width="100" Fill="#fc4c02" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center"></Ellipse>
+                <Ellipse Height="97" Width="97" Fill="White" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center"></Ellipse>
+                <Ellipse Height="40" Width="40" Fill="#fc4c02" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center"></Ellipse>
+            </Grid>
+            <Grid x:Name="ActivityStop" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed" Tapped="ActivityStop_Tapped">
+                <Ellipse Height="103" Width="103" Fill="Gray" Opacity="0.2" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center"></Ellipse>
+                <Ellipse Height="102" Width="102" Fill="Gray" Opacity="0.4" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center"></Ellipse>
+                <Ellipse Height="101" Width="101" Fill="Gray" Opacity="0.6" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center"></Ellipse>
+                <Ellipse Height="100" Width="100" Fill="#fc4c02" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center"></Ellipse>
+                <Ellipse Height="97" Width="97" Fill="White" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center"></Ellipse>
+                <Ellipse Height="40" Width="40" Fill="#fc4c02" Margin="20" HorizontalAlignment="Center" VerticalAlignment="Center"></Ellipse>
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

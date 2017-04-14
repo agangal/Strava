@@ -17,31 +17,24 @@ using Windows.UI.Xaml.Navigation;
 
 namespace StravaUWP.Pages
 {
-    using Newtonsoft.Json;
-    using SharedLibrary;
-    using SharedLibrary.Constants;
-    using SharedLibrary.Helper;
-    using SharedLibrary.ViewModel;
-    using Helper;
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class ProfilePage : Page
+    public sealed partial class RecordActivity : Page
     {
-        public ProfilePage()
+        public RecordActivity()
         {
             this.InitializeComponent();
-           
         }
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+
+        private void ActivityStart_Tapped(object sender, TappedRoutedEventArgs e)
         {
-            base.OnNavigatedTo(e);
-            Profile = new ProfileViewModel();
-            Profile.LoadAthleteInfo();
-            Profile.RefreshAthleteInfo();
-            this.DataContext = Profile;
-        }   
-        
-        public ProfileViewModel Profile { get; set; }
+
+        }
+
+        private void ActivityStop_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -24,8 +24,8 @@
                     <RowDefinition Height="Auto"></RowDefinition>
                 </Grid.RowDefinitions>
                 <!--TOP ROW-->
-                <Grid Grid.Row="0" BorderBrush="#cccccc" BorderThickness="0,0,0,1" Background="White">
-                    <TextBlock Text="Profile" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"></TextBlock>
+                <Grid Grid.Row="0" Style="{StaticResource TitleBarGridStyle}">
+                    <TextBlock Text="Profile" Style="{StaticResource TitleBarHeadingStyle}"></TextBlock>
                 </Grid>
                 <!--Athlete Name and Follow count-->
                 <Grid Grid.Row="1" Background="White">
