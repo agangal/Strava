@@ -139,7 +139,7 @@
   <ItemGroup>
     <Reference Include="RestSharp.UWP, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\asgangal\Downloads\RestSharp-master\RestSharp-master\RestSharp.UWP\bin\Release\RestSharp.UWP.dll</HintPath>
+      <HintPath>..\Packages\RestSharp.UWP.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Import Project="..\SharedLibrary\SharedLibrary.projitems" Label="Shared" />
