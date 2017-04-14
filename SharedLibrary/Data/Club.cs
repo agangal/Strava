@@ -17,7 +17,7 @@ namespace SharedLibrary
         public string city { get; set; }
         public string state { get; set; }
         public string country { get; set; }
-        public bool @private { get; set; }
+        public bool isprivate { get; set; }
         public int member_count { get; set; }
         public bool featured { get; set; }
         public bool verified { get; set; }

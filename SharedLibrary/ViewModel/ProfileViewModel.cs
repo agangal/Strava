@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SharedLibrary.ViewModel
 {
-   
+
     using System.Collections.ObjectModel;
     using System.ComponentModel;
     using Constants;
@@ -17,6 +17,7 @@ namespace SharedLibrary.ViewModel
         public ProfileViewModel()
         {
             ShoesCollection = new ObservableCollection<Shoe>();
+            ClubsCollection = new ObservableCollection<Club>();
         }
         public Athlete AthleteInfo
         {
@@ -38,15 +39,30 @@ namespace SharedLibrary.ViewModel
             }
         }
 
+        private ObservableCollection<Club> _ClubsCollection;
+        public ObservableCollection<Club> ClubsCollection
+        {
+            get { return _ClubsCollection; }
+            set
+            {
+                _ClubsCollection = value;
+            }
+        }
         public async void LoadAthleteInfo()
         {
             string json = await FileHelper.ReadFile(AppConstants.ProfileFile);
             AthleteInfo = JsonConvert.DeserializeObject<Athlete>(json);
-            
+
             ShoesCollection.Clear();
             foreach (var shoe in AthleteInfo.shoes)
             {
                 ShoesCollection.Add(shoe);
+            }
+
+            ClubsCollection.Clear();
+            foreach (var club in AthleteInfo.clubs)
+            {
+                ClubsCollection.Add(club);
             }
         }
     }
