@@ -17,5 +17,8 @@ namespace SharedLibrary
         public const string TokenUri = "https://www.strava.com/oauth/token";
 
         public const string LogoutUri = "https://www.strava.com/oauth/deauthorize";
+
+        public const string BaseUri = "https://www.strava.com/api/v3/";
+        public const string AthleteResourse = "athlete";
     }
 }

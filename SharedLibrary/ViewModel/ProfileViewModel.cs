@@ -10,6 +10,8 @@ namespace SharedLibrary.ViewModel
     using Constants;
     using Helper;
     using Newtonsoft.Json;
+    using StravaUWP.Helper;
+
     public class ProfileViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
@@ -59,6 +61,22 @@ namespace SharedLibrary.ViewModel
                 ShoesCollection.Add(shoe);
             }
 
+            ClubsCollection.Clear();
+            foreach (var club in AthleteInfo.clubs)
+            {
+                ClubsCollection.Add(club);
+            }
+        }
+
+        public async void RefreshAthleteInfo()
+        {
+            string res = await HttpHelper.GetRequest(StravaUri.BaseUri, StravaUri.AthleteResourse);
+            AthleteInfo = JsonConvert.DeserializeObject<Athlete>(res);
+            ShoesCollection.Clear();
+            foreach (var shoe in AthleteInfo.shoes)
+            {
+                ShoesCollection.Add(shoe);
+            }
             ClubsCollection.Clear();
             foreach (var club in AthleteInfo.clubs)
             {
