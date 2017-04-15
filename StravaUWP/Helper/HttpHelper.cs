@@ -10,12 +10,12 @@ namespace StravaUWP.Helper
     using SharedLibrary;
     public class HttpHelper
     {
-        public static Task<string> GetRequest(string api, string resource)
+        public static Task<string> GetRequestAsync(string api, string resource = "")
         {
             RestClient client = new RestClient(api);
             RestRequest request = new RestRequest(resource, Method.GET);
             request.AddParameter("access_token", AuthSettings.ScopeAccessToken);
-            string res = string.Empty ;
+            
             var tcs = new TaskCompletionSource<string>();
             client.ExecuteAsync(request, response =>
             {
@@ -23,11 +23,35 @@ namespace StravaUWP.Helper
                 
             });
             return tcs.Task;
+        }    
+        
+        public static Task<string> PostRequestAsync(string api)
+        {
+            return null;
         }
 
-        private static void callback(IRestResponse arg1, RestRequestAsyncHandle arg2)
+        public static Task<string> PutRequestAsync(string api)
         {
-            throw new NotImplementedException();
+            return null;
+        }
+
+        public static Task<string> DeleteRequestAsync(string api)
+        {
+            return null;
+        }
+        public static string GetRequest(string api)
+        {
+            return null;
+        }
+
+        public static string PutRequest(string api)
+        {
+            return null;
+        }
+
+        public static string PostRequest(string api)
+        {
+            return null;
         }
     }
 }

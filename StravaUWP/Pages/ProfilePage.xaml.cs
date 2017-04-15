@@ -23,6 +23,8 @@ namespace StravaUWP.Pages
     using SharedLibrary.Helper;
     using SharedLibrary.ViewModel;
     using Helper;
+    using Windows.Storage;
+
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
@@ -33,12 +35,16 @@ namespace StravaUWP.Pages
             this.InitializeComponent();
            
         }
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        protected override async void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
             Profile = new ProfileViewModel();
             Profile.LoadAthleteInfo();
             Profile.RefreshAthleteInfo();
+            var applicationData = Windows.Storage.ApplicationData.Current;
+            var localFolder = applicationData.LocalFolder;
+            StorageFile sampleFile = await localFolder.GetFileAsync("sample.gpx");
+            await GenericHelpers.UploadActivity(sampleFile.Path, "sample.gpx");
             this.DataContext = Profile;
         }   
         

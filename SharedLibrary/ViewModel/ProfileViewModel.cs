@@ -75,7 +75,7 @@ namespace SharedLibrary.ViewModel
 
         public async void RefreshAthleteInfo()
         {
-            string res = await HttpHelper.GetRequest(StravaUri.BaseUri, StravaUri.AthleteResourse);
+            string res = await HttpHelper.GetRequestAsync(StravaUri.BaseUri, StravaUri.AthleteResourse);
             AthleteInfo = JsonConvert.DeserializeObject<Athlete>(res);
             ShoesCollection.Clear();
             if (AthleteInfo.shoes != null && AthleteInfo.shoes.Count > 0)
