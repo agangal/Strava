@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>d8f976a0-335d-4639-b800-19e8f32e37d7</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>StravaDotNet</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Activities\Activity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Activities\ActivityLap.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Activities\ActivityMeta.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Activities\ActivityParameter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Activities\ActivityReceivedEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Activities\ActivitySummary.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Activities\ActivityType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Activities\ActivityZone.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Activities\Comment.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Activities\DistributionBucket.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Activities\LeaderboardParameter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Activities\Map.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Activities\Photo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Activities\ResourceState.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Activities\Summary.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Api\Endpoints.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Api\Limit.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Api\Limits.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Api\Usage.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Api\UsageChangedEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Athletes\Athlete.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Athletes\AthleteMeta.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Athletes\AthleteParameter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Athletes\AthleteSummary.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Athletes\Gender.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Authentication\AuthCodeReceivedEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Authentication\Scope.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Authentication\TokenReceivedEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clients\ActivityClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clients\AthleteClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clients\ClubClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clients\EffortClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clients\GearClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clients\RouteClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clients\SegmentClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clients\StatsClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clients\StravaClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clients\StreamClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clients\UploadClient.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clubs\Club.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clubs\ClubEvent.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clubs\ClubSummary.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clubs\ClubType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Clubs\SportType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\Coordinate.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\Dimension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\MapType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\PolylineDecoder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\Unmarshaller.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Common\Version.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Filters\AgeFilter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Filters\GenderFilter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Filters\StringConverter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Filters\TimeFilter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Filters\WeightFilter.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gear\Bike.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gear\BikeType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gear\GearSummary.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Gear\Shoes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Http\AsyncResponseReceivedEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Http\ResponseReceivedEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Routes\Route.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Routes\SubType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Segments\ClimbCategory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Segments\ExplorerResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Segments\ExplorerSegment.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Segments\Leaderboard.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Segments\LeaderboardEntry.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Segments\Segment.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Segments\SegmentEffort.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Segments\SegmentSummary.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Statistics\AllRideTotals.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Statistics\AllRunTotals.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Statistics\RecentRideTotals.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Statistics\RecentRunTotals.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Statistics\Stats.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Statistics\YearToDateRideTotals.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Statistics\YearToDateRunTotals.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Streams\ActivityStream.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Streams\SegmentEffortStream.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Streams\SegmentStream.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Streams\SegmentStreamType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Streams\StreamResolution.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Streams\StreamType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Uploads\CheckStatus.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Uploads\CurrentUploadStatus.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Uploads\DataFormat.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Uploads\FileExtension.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Uploads\UploadStatus.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Uploads\UploadStatusCheck.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Uploads\UploadStatusCheckedEventArgs.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utilities\DateConverter.cs" />
+  </ItemGroup>
+</Project>

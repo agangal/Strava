@@ -7,10 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StravaUWP", "StravaUWP\Stra
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "SharedLibrary", "SharedLibrary\SharedLibrary.shproj", "{21CD5FCC-1BCD-4764-BA37-0A9C7DCF25D6}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "StravaDotNet", "StravaDotNet\StravaDotNet.shproj", "{D8F976A0-335D-4639-B800-19E8F32E37D7}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		SharedLibrary\SharedLibrary.projitems*{21cd5fcc-1bcd-4764-ba37-0a9c7dcf25d6}*SharedItemsImports = 13
 		SharedLibrary\SharedLibrary.projitems*{728f1aca-950a-4f45-a1bb-59326f5096c0}*SharedItemsImports = 4
+		StravaDotNet\StravaDotNet.projitems*{728f1aca-950a-4f45-a1bb-59326f5096c0}*SharedItemsImports = 4
+		StravaDotNet\StravaDotNet.projitems*{d8f976a0-335d-4639-b800-19e8f32e37d7}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|ARM = Debug|ARM
