@@ -17,5 +17,11 @@
             <Setter Property="BorderBrush" Value="#CCCCCC"></Setter>
             <Setter Property="BorderThickness" Value="0,0,0,1"></Setter>
         </Style>
+        <Style x:Key="TitleBarButtonStyle" TargetType="Button">
+            <Setter Property="VerticalAlignment" Value="Center"></Setter>
+            <Setter Property="Background" Value="Transparent"></Setter>
+            <Setter Property="BorderBrush" Value="Transparent"></Setter>
+            <Setter Property="Foreground" Value="#fc4c02"></Setter>
+        </Style>
     </Application.Resources>
 </Application>

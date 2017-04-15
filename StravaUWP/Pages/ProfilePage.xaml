@@ -25,6 +25,9 @@
                 </Grid.RowDefinitions>
                 <!--TOP ROW-->
                 <Grid Grid.Row="0" Style="{StaticResource TitleBarGridStyle}">
+                    <Button Content="Sign Out" x:Name="SignOutButton" Click="SignOutButton_Click" 
+                            Style="{StaticResource TitleBarButtonStyle}"
+                            HorizontalAlignment="Left"  Margin="7,0,0,0"></Button>
                     <TextBlock Text="Profile" Style="{StaticResource TitleBarHeadingStyle}"></TextBlock>
                 </Grid>
                 <!--Athlete Name and Follow count-->

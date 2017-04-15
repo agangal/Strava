@@ -32,7 +32,7 @@ namespace SharedLibrary
         public List<Club> clubs { get; set; }
         public string email { get; set; }
         public object ftp { get; set; }
-        public double weight { get; set; }
+        public object weight { get; set; }
         public List<object> bikes { get; set; }
         public List<Shoe> shoes { get; set; }
     }

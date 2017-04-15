@@ -43,5 +43,10 @@ namespace StravaUWP.Pages
         }   
         
         public ProfileViewModel Profile { get; set; }
+
+        private void SignOutButton_Click(object sender, RoutedEventArgs e)
+        {
+            AuthSettings.ScopeAccessToken = null;
+        }
     }
 }

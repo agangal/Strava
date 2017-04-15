@@ -56,15 +56,20 @@ namespace SharedLibrary.ViewModel
             AthleteInfo = JsonConvert.DeserializeObject<Athlete>(json);
 
             ShoesCollection.Clear();
-            foreach (var shoe in AthleteInfo.shoes)
+            if (AthleteInfo.shoes != null && AthleteInfo.shoes.Count > 0)
             {
-                ShoesCollection.Add(shoe);
+                foreach (var shoe in AthleteInfo.shoes)
+                {
+                    ShoesCollection.Add(shoe);
+                }
             }
-
             ClubsCollection.Clear();
-            foreach (var club in AthleteInfo.clubs)
+            if (AthleteInfo.clubs != null && AthleteInfo.clubs.Count > 0)
             {
-                ClubsCollection.Add(club);
+                foreach (var club in AthleteInfo.clubs)
+                {
+                    ClubsCollection.Add(club);
+                }
             }
         }
 
@@ -73,15 +78,22 @@ namespace SharedLibrary.ViewModel
             string res = await HttpHelper.GetRequest(StravaUri.BaseUri, StravaUri.AthleteResourse);
             AthleteInfo = JsonConvert.DeserializeObject<Athlete>(res);
             ShoesCollection.Clear();
-            foreach (var shoe in AthleteInfo.shoes)
+            if (AthleteInfo.shoes != null && AthleteInfo.shoes.Count > 0)
             {
-                ShoesCollection.Add(shoe);
+                foreach (var shoe in AthleteInfo.shoes)
+                {
+                    ShoesCollection.Add(shoe);
+                }
             }
             ClubsCollection.Clear();
-            foreach (var club in AthleteInfo.clubs)
+            if (AthleteInfo.clubs != null && AthleteInfo.clubs.Count > 0)
             {
-                ClubsCollection.Add(club);
+                foreach (var club in AthleteInfo.clubs)
+                {
+                    ClubsCollection.Add(club);
+                }
             }
+            await FileHelper.WriteFile(AppConstants.ProfileFile, res);
         }
     }
 }
