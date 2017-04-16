@@ -44,7 +44,7 @@ namespace StravaUWP.Pages
             var applicationData = Windows.Storage.ApplicationData.Current;
             var localFolder = applicationData.LocalFolder;
             StorageFile sampleFile = await localFolder.GetFileAsync("sample.gpx");
-            await GenericHelpers.UploadActivity(sampleFile.Path, "sample.gpx");
+            //await GenericHelpers.UploadActivity(sampleFile.Path, "sample.gpx");
             this.DataContext = Profile;
         }   
         

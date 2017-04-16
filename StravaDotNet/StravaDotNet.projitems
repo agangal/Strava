@@ -34,9 +34,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Athletes\AthleteParameter.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Athletes\AthleteSummary.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Athletes\Gender.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Authentication\AuthCodeReceivedEventArgs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Authentication\Scope.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Authentication\TokenReceivedEventArgs.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clients\ActivityClient.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clients\AthleteClient.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Clients\ClubClient.cs" />

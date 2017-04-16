@@ -37,5 +37,20 @@ namespace StravaUWP
             Frame RootFrame = Window.Current.Content as Frame;
             RootFrame.Navigate(typeof(Pages.ProfilePage));
         }
+
+        private void Feed_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Record_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Profile_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
