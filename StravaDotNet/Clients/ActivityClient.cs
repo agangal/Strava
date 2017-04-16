@@ -27,6 +27,7 @@ using Strava.Utilities;
 using System.Globalization;
 using SharedLibrary;
 using StravaUWP.Helper;
+using Newtonsoft.Json;
 namespace StravaDotNet
 {
     /// <summary>

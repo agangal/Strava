@@ -23,7 +23,7 @@ using System.Threading.Tasks;
 using StravaDotNet;
 using SharedLibrary;
 using StravaUWP.Helper;
-
+using Newtonsoft.Json;
 namespace StravaDotNet
 {
     /// <summary>
