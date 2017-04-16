@@ -53,6 +53,8 @@ namespace StravaUWP.Pages
         private void SignOutButton_Click(object sender, RoutedEventArgs e)
         {
             AuthSettings.ScopeAccessToken = null;
+            Frame RootFrame = Window.Current.Content as Frame;
+            RootFrame.Navigate(typeof(SignInPage));
         }
     }
 }
