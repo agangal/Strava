@@ -18,6 +18,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Data\Shoe.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Data\AuthTokenData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Helper\FileHelper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\FeedViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\ProfileViewModel.cs" />
   </ItemGroup>
 </Project>

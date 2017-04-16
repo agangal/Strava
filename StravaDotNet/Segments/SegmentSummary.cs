@@ -20,6 +20,7 @@
 using System;
 
 using Newtonsoft.Json;
+using StravaDotNet;
 
 namespace Strava.Segments
 {

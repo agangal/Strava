@@ -28,29 +28,24 @@ namespace StravaUWP
             this.Loaded += MainPage_Loaded;
         }
 
-        private  async void MainPage_Loaded(object sender, RoutedEventArgs e)
+        private void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
-            if (AuthSettings.ScopeAccessToken == null)
-            {
-                await AuthHelper.StravaSigninFlow();
-            }
-            Frame RootFrame = Window.Current.Content as Frame;
-            RootFrame.Navigate(typeof(Pages.ProfilePage));
+            PageFrame.Navigate(typeof(Pages.ProfilePage));
         }
 
         private void Feed_Click(object sender, RoutedEventArgs e)
         {
-
+            PageFrame.Navigate(typeof(Pages.FeedPage));
         }
 
         private void Record_Click(object sender, RoutedEventArgs e)
         {
-
+            PageFrame.Navigate(typeof(Pages.RecordActivity));
         }
 
         private void Profile_Click(object sender, RoutedEventArgs e)
         {
-
+            PageFrame.Navigate(typeof(Pages.ProfilePage));
         }
     }
 }
