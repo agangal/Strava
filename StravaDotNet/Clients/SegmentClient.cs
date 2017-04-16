@@ -21,9 +21,10 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Threading.Tasks;
-using Strava.Activities;
+
 using Strava.Api;
-using StravaDotNet;using SharedLibrary;
+using StravaDotNet;
+using SharedLibrary;
 using Strava.Segments;
 using StravaUWP.Helper;
 namespace StravaDotNet

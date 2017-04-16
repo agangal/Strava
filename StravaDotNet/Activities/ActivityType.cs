@@ -17,7 +17,7 @@
 
 #endregion
 
-namespace Strava.Activities
+namespace StravaDotNet
 {
     /// <summary>
     /// The type of an activity.

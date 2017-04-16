@@ -18,7 +18,7 @@
 #endregion
 
 using System;
-using Strava.Activities;
+
 using StravaDotNet;
 using Newtonsoft.Json;
 

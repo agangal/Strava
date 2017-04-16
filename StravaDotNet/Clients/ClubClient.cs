@@ -20,7 +20,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Strava.Activities;
+
 using Strava.Api;
 using StravaDotNet;
 

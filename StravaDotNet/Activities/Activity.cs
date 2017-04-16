@@ -23,7 +23,7 @@ using Strava.Segments;
 using Newtonsoft.Json;
 using StravaDotNet;
 
-namespace Strava.Activities
+namespace StravaDotNet
 {
     /// <summary>
     /// Activities are the base object for Strava runs, rides, swims etc.

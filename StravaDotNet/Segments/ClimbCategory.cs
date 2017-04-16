@@ -17,7 +17,7 @@
 
 #endregion
 
-namespace Strava.Activities
+namespace StravaDotNet
 {
     /// <summary>
     /// This enum represents the category of a segment.

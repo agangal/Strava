@@ -20,7 +20,7 @@
 using System;
 using Newtonsoft.Json;
 
-namespace Strava.Activities
+namespace StravaDotNet
 {
     /// <summary>
     /// This class contains information about a single leaderboard entry.

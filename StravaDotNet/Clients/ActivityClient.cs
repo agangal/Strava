@@ -20,7 +20,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Strava.Activities;
+
 using Strava.Api;
 using StravaDotNet;
 using Strava.Utilities;
@@ -287,8 +287,8 @@ namespace StravaDotNet
         {
             string getUrl = string.Format("{0}?page={1}&per_page={2}&access_token={3}", Endpoints.Activities, page, perPage, AuthSettings.ScopeAccessToken);
             string json = await StravaUWP.Helper.HttpHelper.GetRequestAsync(getUrl);;
-
-            return Unmarshaller<List<ActivitySummary>>.Unmarshal(json);
+            List<ActivitySummary> Summary = JsonConvert.DeserializeObject<List<ActivitySummary>>(json);
+            return Summary;
         }
 
         /// <summary>
@@ -301,8 +301,8 @@ namespace StravaDotNet
         {
             string getUrl = string.Format("{0}?page={1}&per_page={2}&access_token={3}", Endpoints.ActivitiesFollowers, page, perPage, AuthSettings.ScopeAccessToken);
             string json = await StravaUWP.Helper.HttpHelper.GetRequestAsync(getUrl);;
-
-            return Unmarshaller<List<ActivitySummary>>.Unmarshal(json);
+            List<ActivitySummary> Summary = JsonConvert.DeserializeObject<List<ActivitySummary>>(json);
+            return Summary;
         }
 
         /// <summary>
@@ -426,7 +426,7 @@ namespace StravaDotNet
 
             string json = await HttpHelper.PutRequestAsync(putUrl);
 
-            return Unmarshaller<Activity>.Unmarshal(json);
+            return JsonConvert.DeserializeObject<Activity>(json) ;
         }
 
         /// <summary>

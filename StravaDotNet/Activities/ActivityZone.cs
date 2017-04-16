@@ -21,7 +21,7 @@ using System;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace Strava.Activities
+namespace StravaDotNet
 {
     /// <summary>
     /// Represents a Strava activity zone.

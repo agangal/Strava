@@ -17,7 +17,7 @@
 
 #endregion
 
-namespace Strava.Activities
+namespace StravaDotNet
 {
     /// <summary>
     /// This class holds information about the received activity.

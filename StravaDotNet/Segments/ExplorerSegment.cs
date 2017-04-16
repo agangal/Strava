@@ -22,7 +22,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using StravaDotNet;
 
-namespace Strava.Activities
+namespace StravaDotNet
 {
     /// <summary>
     /// A single segment returned from the segment explorer.

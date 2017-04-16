@@ -23,7 +23,7 @@ using System.Linq;
 using StravaDotNet;
 using Newtonsoft.Json;
 
-namespace Strava.Activities
+namespace StravaDotNet
 {
     /// <summary>
     /// Represents a less detailed version of an activity.

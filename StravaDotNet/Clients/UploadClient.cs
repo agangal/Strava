@@ -21,7 +21,7 @@ using System;
 using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
-using Strava.Activities;
+
 using Strava.Api;
 using StravaDotNet;
 using Strava.Upload;

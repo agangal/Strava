@@ -20,7 +20,7 @@
 using StravaDotNet;
 using Newtonsoft.Json;
 
-namespace Strava.Activities
+namespace StravaDotNet
 {
     /// <summary>
     /// Represents a comment of an activity.

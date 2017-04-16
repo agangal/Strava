@@ -20,7 +20,7 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace Strava.Activities
+namespace StravaDotNet
 {
     /// <summary>
     /// Represents the leaderboard of a segment.

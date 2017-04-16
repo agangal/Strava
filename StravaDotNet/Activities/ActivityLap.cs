@@ -21,7 +21,7 @@ using System;
 using StravaDotNet;
 using Newtonsoft.Json;
 
-namespace Strava.Activities
+namespace StravaDotNet
 {
     /// <summary>
     /// Laps are triggered by athletes using their respective devices, such as Garmin watches.
