@@ -27,8 +27,22 @@ namespace StravaUWP.Pages
         public SignInPage()
         {
             this.InitializeComponent();
+            this.Loaded += SignInPage_Loaded;
         }
 
+        private void SignInPage_Loaded(object sender, RoutedEventArgs e)
+        {
+            if (AuthSettings.ScopeAccessToken != null)
+            {
+                Frame RootFrame = Window.Current.Content as Frame;
+                RootFrame.Navigate(typeof(MainPage));
+            }
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);            
+        }
         private async void SignInButton_Click(object sender, RoutedEventArgs e)
         {
             Results res = await AuthHelper.StravaSigninFlow();

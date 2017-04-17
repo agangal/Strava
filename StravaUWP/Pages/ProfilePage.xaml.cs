@@ -35,15 +35,15 @@ namespace StravaUWP.Pages
             this.InitializeComponent();
            
         }
-        protected override async void OnNavigatedTo(NavigationEventArgs e)
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
             Profile = new ProfileViewModel();
-            Profile.LoadAthleteInfo();
+            //Profile.LoadAthleteInfo();
             Profile.RefreshAthleteInfo();
-            var applicationData = Windows.Storage.ApplicationData.Current;
-            var localFolder = applicationData.LocalFolder;
-            StorageFile sampleFile = await localFolder.GetFileAsync("sample.gpx");
+            //var applicationData = Windows.Storage.ApplicationData.Current;
+            //var localFolder = applicationData.LocalFolder;
+            //StorageFile sampleFile = await localFolder.GetFileAsync("sample.gpx");
             //await GenericHelpers.UploadActivity(sampleFile.Path, "sample.gpx");
             this.DataContext = Profile;
         }   
