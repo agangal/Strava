@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SharedLibrary.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,8 +26,17 @@ namespace StravaUWP.Pages
         public FeedPage()
         {
             this.InitializeComponent();
+            Feed = new FeedViewModel();
+            this.DataContext = Feed;
         }
 
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);            
+            Feed.RefreshFeed();            
+        }
+
+        public FeedViewModel Feed { get; set; }
         private void AddNewActivity_Click(object sender, RoutedEventArgs e)
         {
 

@@ -290,14 +290,14 @@ namespace StravaDotNet
         /// <summary>
         /// Coordinate where the activity was started.
         /// </summary>
-        public double? StartLatitude
+        public double StartLatitude
         {
             get
             {
                 if (StartPoint != null && StartPoint.Count > 0)
-                    return StartPoint.ElementAt(0);
+                    return StartPoint[0];
 
-                return null;
+                return 0;
             }
         }
 
@@ -310,14 +310,14 @@ namespace StravaDotNet
         /// <summary>
         /// Coordinate where the activity was started.
         /// </summary>
-        public double? StartLongitude
+        public double StartLongitude
         {
             get
             {
                 if (StartPoint != null && StartPoint.Count > 0)
-                    return StartPoint.ElementAt(1);
+                    return StartPoint[1];
 
-                return null;
+                return 0;
             }
         }
 
@@ -372,5 +372,6 @@ namespace StravaDotNet
         /// </summary>
         [JsonProperty("athlete")]
         public AthleteMeta Athlete { get; set; }
+
     }
 }

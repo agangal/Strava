@@ -20,6 +20,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using Windows.Devices.Geolocation;
 
 namespace StravaDotNet
 {
@@ -33,13 +34,13 @@ namespace StravaDotNet
         /// </summary>
         /// <param name="encodedPoints">The encoded polyline.</param>
         /// <returns>A list of coordinates.</returns>
-        public static List<Coordinate> Decode(string encodedPoints)
+        public static List<BasicGeoposition> Decode(string encodedPoints)
         {
             {
                 if (string.IsNullOrEmpty(encodedPoints))
                     return null;
 
-                List<Coordinate> poly = new List<Coordinate>();
+                List<BasicGeoposition> poly = new List<BasicGeoposition>();
                 char[] polylinechars = encodedPoints.ToCharArray();
                 int index = 0;
 
@@ -82,8 +83,12 @@ namespace StravaDotNet
                             break;
 
                         currentLng += (sum & 1) == 1 ? ~(sum >> 1) : (sum >> 1);
-
-                        poly.Add(new Coordinate(Convert.ToDouble(currentLat) / 100000.0, Convert.ToDouble(currentLng) / 100000.0));
+                        var geopoisiton = new BasicGeoposition
+                        {
+                            Latitude = Convert.ToDouble(currentLat) / 100000.0,
+                            Longitude = Convert.ToDouble(currentLng) / 100000.0
+                        };
+                        poly.Add(geopoisiton);
                     }
                 }
                 catch (Exception ex)

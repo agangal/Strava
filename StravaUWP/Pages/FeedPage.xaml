@@ -3,10 +3,16 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:StravaUWP.Pages"
+    xmlns:viewModels="using:SharedLibrary.ViewModel"
+    xmlns:data="using:StravaDotNet"
+    xmlns:controls="using:StravaUWP.CustomControl" 
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
+    <!--<Page.DataContext>
+        <viewModels:FeedViewModel x:Name="FeedViewModel"></viewModels:FeedViewModel>
+    </Page.DataContext>-->
     <Grid Background="White">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
@@ -17,6 +23,24 @@
                             Style="{StaticResource TitleBarButtonStyle}"
                             HorizontalAlignment="Left"  Margin="7,0,0,0"></Button>
             <TextBlock Text="Feed" Style="{StaticResource TitleBarHeadingStyle}"></TextBlock>
+        </Grid>
+        <Grid Grid.Row="1">
+            <ListView ItemsSource="{x:Bind Feed.FollowerActivityCollection}">
+                <ListView.ItemTemplate>
+                    <DataTemplate x:DataType="data:ActivitySummary">
+                        <Grid HorizontalAlignment="Stretch">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                                <RowDefinition Height="Auto"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <TextBlock Text="{x:Bind Name}" Grid.Row="0"></TextBlock>
+                            <controls:FeedMapControl Grid.Row="1" MinWidth="300" HorizontalAlignment="Stretch"
+                                                     EncodedPolyline="{x:Bind Map.SummaryPolyline}"
+                                                     Height="200"></controls:FeedMapControl>
+                        </Grid>                       
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>           
         </Grid>
     </Grid>
 </Page>

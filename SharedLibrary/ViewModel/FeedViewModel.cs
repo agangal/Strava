@@ -30,6 +30,15 @@ namespace SharedLibrary.ViewModel
             ActivityClient Activity = new ActivityClient();
             List<ActivitySummary> Summary = await Activity.GetFollowersActivitiesAsync(1, 100);
             System.Diagnostics.Debug.WriteLine("Summary received");
+            if (FollowerActivityCollection == null)
+            {
+                FollowerActivityCollection = new ObservableCollection<ActivitySummary>();
+            }
+            FollowerActivityCollection.Clear();
+            foreach (var activity in Summary)
+            {
+                FollowerActivityCollection.Add(activity);
+            }
         }
     }
 }
